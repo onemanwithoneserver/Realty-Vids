@@ -1,4 +1,5 @@
 import { opportunityCuratedRows, opportunityVerticalPool } from "./data";
+import { publicAsset } from "../../publicAsset";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
   VideoKind,
@@ -85,7 +86,7 @@ function VideoOpportunitiesHome({
               ? IMAGES.tower
               : IMAGES.interior
         }
-        videoSrc="/media/banner-opportunities.webm"
+        videoSrc={publicAsset("media/banner-opportunities.webm")}
         eyebrow={`FEATURED VERIFIED OPPORTUNITY · ${category.toUpperCase()}`}
         title={opportunityTitle}
         creator="Realty Vids Verification Desk"
@@ -107,7 +108,7 @@ function VideoOpportunitiesHome({
                   ? IMAGES.tower
                   : IMAGES.interior,
             eyebrow: `VERIFIED OPPORTUNITY · 04:36`,
-            videoSrc: "/media/banner-opportunities.webm",
+            videoSrc: publicAsset("media/banner-opportunities.webm"),
           })
         }
         onDetails={onOpportunity}

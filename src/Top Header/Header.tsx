@@ -6,6 +6,7 @@ import SmartphoneIcon from "@mui/icons-material/Smartphone";
 import { m, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
 import ViewDropdown from "./ViewDropdown";
+import { publicAsset } from "../publicAsset";
 
 export type AppTheme = "light" | "dark";
 export type ViewMode = "desktop" | "mobile";
@@ -45,7 +46,7 @@ export default function Header({
         to={`/${theme}/${viewMode}/discover`}
         aria-label="Realty Vids home"
       >
-        <img src="/brand/realty-vids-symbol.svg" alt="" />
+        <img src={publicAsset("brand/realty-vids-symbol.svg")} alt="" />
         <span>Realty Vids</span>
       </Link>
       <div className="app-header-controls">

@@ -35,6 +35,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 
 import TuneIcon from "@mui/icons-material/Tune";
+import { publicAsset } from "./publicAsset";
 
 export type Section = "feed" | "discover" | "opportunities" | "insights";
 
@@ -65,13 +66,13 @@ export type SelectedVideo = {
 };
 
 export const IMAGES = {
-  tower: "/media/tower.jpg",
-  city: "/media/city.jpg",
-  pool: "/media/pool.jpg",
-  interior: "/media/interior.jpg",
-  lounge: "/media/lounge.jpg",
-  skyline: "/media/skyline.jpg",
-  aerial: "/media/aerial.jpg",
+  tower: publicAsset("media/tower.jpg"),
+  city: publicAsset("media/city.jpg"),
+  pool: publicAsset("media/pool.jpg"),
+  interior: publicAsset("media/interior.jpg"),
+  lounge: publicAsset("media/lounge.jpg"),
+  skyline: publicAsset("media/skyline.jpg"),
+  aerial: publicAsset("media/aerial.jpg"),
 };
 
 export const streamVideos = [
@@ -165,10 +166,10 @@ export function Brand({ compact = false, dark = false }: { compact?: boolean; da
       <img
         src={
           compact
-            ? "/brand/realty-vids-symbol.svg"
+            ? publicAsset("brand/realty-vids-symbol.svg")
             : dark
-              ? "/brand/realty-vids-logo-dark.svg"
-              : "/brand/realty-vids-logo.svg"
+              ? publicAsset("brand/realty-vids-logo-dark.svg")
+              : publicAsset("brand/realty-vids-logo.svg")
         }
         alt="Realty Vids"
       />
@@ -1156,7 +1157,10 @@ export function InlineExpandedPlayer({
               controls
               poster={content.poster}
             >
-              <source src={selected?.videoSrc ?? "/media/realty-preview.webm"} type="video/webm" />
+              <source
+                src={selected?.videoSrc ?? publicAsset("media/realty-preview.webm")}
+                type="video/webm"
+              />
             </video>
           </div>
           <div className="inline-video-title">

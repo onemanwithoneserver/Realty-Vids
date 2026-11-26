@@ -1,4 +1,5 @@
 import { discoverVideoRails, buildDiscoverVerticalPool } from "./data";
+import { publicAsset } from "../../publicAsset";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
   VideoKind,
@@ -193,7 +194,9 @@ function VideoDiscoverHome({
       <CinematicFeaturedBanner
         image={heroContext.image}
         videoSrc={
-          isResale ? "/media/banner-discover-secondary.webm" : "/media/banner-discover-primary.webm"
+          isResale
+            ? publicAsset("media/banner-discover-secondary.webm")
+            : publicAsset("media/banner-discover-primary.webm")
         }
         eyebrow={isResale ? "FEATURED HOME WALKTHROUGH" : "FEATURED PROJECT WALKTHROUGH"}
         title={heroContext.title}
@@ -214,8 +217,8 @@ function VideoDiscoverHome({
               isResale ? "04:18" : "06:24"
             }`,
             videoSrc: isResale
-              ? "/media/banner-discover-secondary.webm"
-              : "/media/banner-discover-primary.webm",
+              ? publicAsset("media/banner-discover-secondary.webm")
+              : publicAsset("media/banner-discover-primary.webm"),
           })
         }
         onDetails={isResale ? onProperty : onProject}

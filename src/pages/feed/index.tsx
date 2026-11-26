@@ -1,5 +1,6 @@
 import { feedVerticalPool } from "./data";
 import { discoverVideoRails } from "../discover/data";
+import { publicAsset } from "../../publicAsset";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
   VideoKind,
@@ -54,7 +55,7 @@ function VideoFeedHome({
       </div>
       <CinematicFeaturedBanner
         image={IMAGES.tower}
-        videoSrc="/media/banner-feed.webm"
+        videoSrc={publicAsset("media/banner-feed.webm")}
         eyebrow="FEATURED FOR YOU"
         title="Aurelia: Above the expected"
         creator="Realty Vids Studios"
@@ -70,7 +71,7 @@ function VideoFeedHome({
             creatorMeta: "Personalised project film · Worli",
             poster: IMAGES.tower,
             eyebrow: "PROJECT FILM · 06:24",
-            videoSrc: "/media/banner-feed.webm",
+            videoSrc: publicAsset("media/banner-feed.webm"),
           })
         }
         onDetails={onProject}

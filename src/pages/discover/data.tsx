@@ -1,4 +1,5 @@
 import { IMAGES, type VerticalVideoItem, type VideoKind } from "../../AppShared";
+import { publicAsset } from "../../publicAsset";
 import { verticalImages } from "../data-utils";
 
 export const page = { path: "/discover", label: "Discover" } as const;
@@ -9,7 +10,7 @@ export const discoverVideoRails = [
     title: "Watch before you shortlist",
     videos: [
       [
-        "/media/discover-01.jpg",
+        publicAsset("media/discover-01.jpg"),
         "A courtyard-led residence in Juhu",
         "Realty Vids Studios",
         "Aranya House · Juhu",
@@ -17,7 +18,7 @@ export const discoverVideoRails = [
         "PROJECT FILM",
       ],
       [
-        "/media/discover-02.jpg",
+        publicAsset("media/discover-02.jpg"),
         "Inside a contemporary Alibaug retreat",
         "Mira Shah",
         "Casa Maré · Alibaug",
@@ -25,7 +26,7 @@ export const discoverVideoRails = [
         "WALKTHROUGH",
       ],
       [
-        "/media/discover-03.jpg",
+        publicAsset("media/discover-03.jpg"),
         "A family home built around the garden",
         "The Dimensions",
         "Verdant Villa · Pune",
@@ -33,7 +34,7 @@ export const discoverVideoRails = [
         "HOME TOUR",
       ],
       [
-        "/media/discover-04.jpg",
+        publicAsset("media/discover-04.jpg"),
         "Where warm materials meet clean geometry",
         "Studio Habitat",
         "House 18 · Goa",
@@ -47,7 +48,7 @@ export const discoverVideoRails = [
     title: "What Mumbai is watching",
     videos: [
       [
-        "/media/discover-05.jpg",
+        publicAsset("media/discover-05.jpg"),
         "The low-rise community drawing new attention",
         "Nikhil Desai",
         "Palm County · Thane",
@@ -55,7 +56,7 @@ export const discoverVideoRails = [
         "TRENDING",
       ],
       [
-        "/media/discover-06.jpg",
+        publicAsset("media/discover-06.jpg"),
         "Why buyers are looking beyond the sea link",
         "Aarav Mehta",
         "West Bay · Navi Mumbai",
@@ -63,7 +64,7 @@ export const discoverVideoRails = [
         "MARKET WATCH",
       ],
       [
-        "/media/discover-07.jpg",
+        publicAsset("media/discover-07.jpg"),
         "Brick, shade and a quieter way to live",
         "Ananya Rao",
         "The Grove · Bengaluru",
@@ -71,7 +72,7 @@ export const discoverVideoRails = [
         "ARCHITECTURE",
       ],
       [
-        "/media/discover-08.jpg",
+        publicAsset("media/discover-08.jpg"),
         "A new residential pocket takes shape",
         "Realty Vids Research",
         "North Gardens · Powai",
@@ -85,7 +86,7 @@ export const discoverVideoRails = [
     title: "Room to live differently",
     videos: [
       [
-        "/media/discover-09.jpg",
+        publicAsset("media/discover-09.jpg"),
         "A vertical villa with views in every direction",
         "Open House India",
         "Sky Villa · Worli",
@@ -93,7 +94,7 @@ export const discoverVideoRails = [
         "VILLA TOUR",
       ],
       [
-        "/media/discover-10.jpg",
+        publicAsset("media/discover-10.jpg"),
         "Poolside living away from the city",
         "Kavya Menon",
         "The Palms · Karjat",
@@ -101,7 +102,7 @@ export const discoverVideoRails = [
         "WEEKEND HOME",
       ],
       [
-        "/media/discover-11.jpg",
+        publicAsset("media/discover-11.jpg"),
         "A timber-lined home made for slow weekends",
         "Design Dispatch",
         "Forest House · Lonavala",
@@ -109,7 +110,7 @@ export const discoverVideoRails = [
         "DESIGN TOUR",
       ],
       [
-        "/media/discover-12.jpg",
+        publicAsset("media/discover-12.jpg"),
         "Living among the trees without leaving Mumbai",
         "Rhea Mehta",
         "Canopy Villas · Aarey",
@@ -123,7 +124,7 @@ export const discoverVideoRails = [
     title: "The city, seen from inside",
     videos: [
       [
-        "/media/discover-13.jpg",
+        publicAsset("media/discover-13.jpg"),
         "Colour, character and a Bandra address",
         "Inside Mumbai",
         "Chapel Road Homes · Bandra",

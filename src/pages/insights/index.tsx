@@ -1,4 +1,5 @@
 import { insightCuratedRows, insightVerticalPool } from "./data";
+import { publicAsset } from "../../publicAsset";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
   VideoKind,
@@ -76,6 +77,12 @@ function VideoInsightsHome({
     ],
   };
   const [insightLabel, insightTitle, insightDescription] = insightCopy[category];
+  const insightPoster =
+    category === "Locality Insights"
+      ? publicAsset("media/discover-01.jpg")
+      : category === "Learn"
+        ? publicAsset("media/discover-02.jpg")
+        : publicAsset("media/discover-03.jpg");
   return (
     <section className="cinematic-page stream-home insights-stream">
       <div className="stream-page-heading">
@@ -99,14 +106,8 @@ function VideoInsightsHome({
         ))}
       </div>
       <CinematicFeaturedBanner
-        image={
-          category === "Locality Insights"
-            ? "/media/discover-01.jpg"
-            : category === "Learn"
-              ? "/media/discover-02.jpg"
-              : "/media/discover-03.jpg"
-        }
-        videoSrc="/media/banner-insights.webm"
+        image={insightPoster}
+        videoSrc={publicAsset("media/banner-insights.webm")}
         eyebrow={insightLabel}
         title={insightTitle}
         creator="Rhea Mehta"
@@ -120,14 +121,9 @@ function VideoInsightsHome({
             title: insightTitle,
             creator: "Rhea Mehta",
             creatorMeta: `${category} · Realty Vids Learning`,
-            poster:
-              category === "Locality Insights"
-                ? "/media/discover-01.jpg"
-                : category === "Learn"
-                  ? "/media/discover-02.jpg"
-                  : "/media/discover-03.jpg",
-            eyebrow: `${category.toUpperCase()} · 12:46`,
-            videoSrc: "/media/banner-insights.webm",
+            poster: insightPoster,
+            eyebrow: `${insightLabel} · 12:46`,
+            videoSrc: publicAsset("media/banner-insights.webm"),
           })
         }
         onDetails={onExpert}
