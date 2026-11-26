@@ -52,10 +52,12 @@ function isSection(value: unknown): value is Section {
   return typeof value === "string" && sections.includes(value as Section);
 }
 
-export default function App({ theme }: { theme: AppTheme }) {
+export default function App({ theme, viewMode }: { theme: AppTheme; viewMode: ViewMode }) {
   const location = useLocation();
   const navigate = useNavigate();
-  const routePath = location.pathname.replace(/^\/(?:light|dark)(?=\/|$)/, "") || "/discover";
+  const routePath =
+    location.pathname.replace(/^\/(?:light|dark)\/(?:desktop|mobile)(?=\/|$)/, "") ||
+    "/discover";
   const routeSection = routePath.slice(1);
   const previousSection = (location.state as { active?: unknown } | null)?.active;
   const active = isSection(routeSection)
@@ -66,9 +68,6 @@ export default function App({ theme }: { theme: AppTheme }) {
   const view = pathViews[routePath] ?? null;
   const [saved, setSaved] = useState<Set<string>>(new Set(["short02"]));
   const [searchOpen, setSearchOpen] = useState(false);
-  const [viewMode, setViewMode] = useState<ViewMode>(() =>
-    sessionStorage.getItem("realty-vids-preview-mode") === "mobile" ? "mobile" : "desktop",
-  );
   const [headerVisible, setHeaderVisible] = useState(true);
   const [inlineVideo, setInlineVideo] = useState<{
     kind: VideoKind;
@@ -82,14 +81,14 @@ export default function App({ theme }: { theme: AppTheme }) {
   const reduceMotion = useReducedMotion();
   const setView = (destination: View) => {
     if (!destination) {
-      navigate(`/${theme}/${active}`);
+      navigate(`/${theme}/${viewMode}/${active}`);
       return;
     }
-    navigate(`/${theme}${viewPaths[destination]}`, { state: { active } });
+    navigate(`/${theme}/${viewMode}${viewPaths[destination]}`, { state: { active } });
   };
   const openSection = (section: Section) => {
     setInlineVideo(null);
-    navigate(`/${theme}/${section}`);
+    navigate(`/${theme}/${viewMode}/${section}`);
   };
   const openVideo = (
     kind: VideoKind,
@@ -134,9 +133,6 @@ export default function App({ theme }: { theme: AppTheme }) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [active, view]);
   useEffect(() => {
-    sessionStorage.setItem("realty-vids-preview-mode", viewMode);
-  }, [viewMode]);
-  useEffect(() => {
     const listener = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
         e.preventDefault();
@@ -163,10 +159,16 @@ export default function App({ theme }: { theme: AppTheme }) {
               key="app-header"
               viewMode={viewMode}
               theme={theme}
-              onViewModeChange={setViewMode}
-              onThemeChange={(nextTheme) => navigate(`/${nextTheme}${routePath}`, { state: { active } })}
+              onViewModeChange={(nextMode) =>
+                navigate(`/${theme}/${nextMode}${routePath}`, { state: { active } })
+              }
+              onThemeChange={(nextTheme) =>
+                navigate(`/${nextTheme}/${viewMode}${routePath}`, { state: { active } })
+              }
               view={routePath}
-              onViewChange={(path) => navigate(`/${theme}${path}`, { state: { active } })}
+              onViewChange={(path) =>
+                navigate(`/${theme}/${viewMode}${path}`, { state: { active } })
+              }
               onClose={() => setHeaderVisible(false)}
             />
           )}

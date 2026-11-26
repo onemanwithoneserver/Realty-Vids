@@ -40,7 +40,11 @@ export default function Header({
       exit={reduceMotion ? undefined : { opacity: 0, y: -6 }}
       transition={{ duration: reduceMotion ? 0 : 0.2, ease: "easeOut" }}
     >
-      <Link className="app-header-brand" to={`/${theme}/discover`} aria-label="Realty Vids home">
+      <Link
+        className="app-header-brand"
+        to={`/${theme}/${viewMode}/discover`}
+        aria-label="Realty Vids home"
+      >
         <img src="/brand/realty-vids-symbol.svg" alt="" />
         <span>Realty Vids</span>
       </Link>
