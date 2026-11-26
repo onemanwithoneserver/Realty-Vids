@@ -7,7 +7,10 @@ const githubPagesPath = sessionStorage.getItem("realty-vids-redirect");
 if (githubPagesPath) {
   sessionStorage.removeItem("realty-vids-redirect");
   const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
-  window.history.replaceState(null, "", `${basePath}${githubPagesPath}`);
+  const route = githubPagesPath.startsWith("/") ? githubPagesPath : `/${githubPagesPath}`;
+  const destination =
+    import.meta.env.BASE_URL === "/" ? `${basePath}${route}` : `${basePath}/#${route}`;
+  window.history.replaceState(null, "", destination);
 }
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
