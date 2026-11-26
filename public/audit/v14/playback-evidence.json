@@ -1,0 +1,344 @@
+{
+  "desktop": {
+    "My Feed": {
+      "playback": {
+        "a": {
+          "src": "banner-feed.webm",
+          "ready": 4,
+          "paused": false,
+          "muted": true,
+          "loop": true,
+          "playsInline": true,
+          "time": 1.328,
+          "readyClass": true,
+          "banners": 1
+        },
+        "b": {
+          "src": "banner-feed.webm",
+          "ready": 4,
+          "paused": false,
+          "muted": true,
+          "loop": true,
+          "playsInline": true,
+          "time": 2.037,
+          "readyClass": true,
+          "banners": 1
+        },
+        "advanced": 0.709
+      },
+      "structure": {
+        "ratio": 1.778,
+        "curated": 4,
+        "vertical": true
+      }
+    },
+    "Discover": {
+      "playback": {
+        "a": {
+          "src": "banner-discover-primary.webm",
+          "ready": 4,
+          "paused": false,
+          "muted": true,
+          "loop": true,
+          "playsInline": true,
+          "time": 1.321,
+          "readyClass": true,
+          "banners": 1
+        },
+        "b": {
+          "src": "banner-discover-primary.webm",
+          "ready": 4,
+          "paused": false,
+          "muted": true,
+          "loop": true,
+          "playsInline": true,
+          "time": 2.029,
+          "readyClass": true,
+          "banners": 1
+        },
+        "advanced": 0.708
+      },
+      "structure": {
+        "ratio": 1.778,
+        "curated": 4,
+        "vertical": true
+      }
+    },
+    "Opportunities": {
+      "playback": {
+        "a": {
+          "src": "banner-opportunities.webm",
+          "ready": 4,
+          "paused": false,
+          "muted": true,
+          "loop": true,
+          "playsInline": true,
+          "time": 1.285,
+          "readyClass": true,
+          "banners": 1
+        },
+        "b": {
+          "src": "banner-opportunities.webm",
+          "ready": 4,
+          "paused": false,
+          "muted": true,
+          "loop": true,
+          "playsInline": true,
+          "time": 1.993,
+          "readyClass": true,
+          "banners": 1
+        },
+        "advanced": 0.708
+      },
+      "structure": {
+        "ratio": 1.778,
+        "curated": 4,
+        "vertical": true
+      }
+    },
+    "Insights": {
+      "playback": {
+        "a": {
+          "src": "banner-insights.webm",
+          "ready": 4,
+          "paused": false,
+          "muted": true,
+          "loop": true,
+          "playsInline": true,
+          "time": 1.317,
+          "readyClass": true,
+          "banners": 1
+        },
+        "b": {
+          "src": "banner-insights.webm",
+          "ready": 4,
+          "paused": false,
+          "muted": true,
+          "loop": true,
+          "playsInline": true,
+          "time": 2.024,
+          "readyClass": true,
+          "banners": 1
+        },
+        "advanced": 0.707
+      },
+      "structure": {
+        "ratio": 1.778,
+        "curated": 4,
+        "vertical": true
+      }
+    }
+  },
+  "mobile": {
+    "My Feed": {
+      "a": {
+        "src": "banner-feed.webm",
+        "ready": 4,
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "time": 1.318,
+        "readyClass": true,
+        "banners": 1
+      },
+      "b": {
+        "src": "banner-feed.webm",
+        "ready": 4,
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "time": 2.025,
+        "readyClass": true,
+        "banners": 1
+      },
+      "advanced": 0.707
+    },
+    "Discover": {
+      "a": {
+        "src": "banner-discover-primary.webm",
+        "ready": 4,
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "time": 1.338,
+        "readyClass": true,
+        "banners": 1
+      },
+      "b": {
+        "src": "banner-discover-primary.webm",
+        "ready": 4,
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "time": 2.042,
+        "readyClass": true,
+        "banners": 1
+      },
+      "advanced": 0.704
+    },
+    "Opportunities": {
+      "a": {
+        "src": "banner-opportunities.webm",
+        "ready": 4,
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "time": 1.284,
+        "readyClass": true,
+        "banners": 1
+      },
+      "b": {
+        "src": "banner-opportunities.webm",
+        "ready": 4,
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "time": 1.99,
+        "readyClass": true,
+        "banners": 1
+      },
+      "advanced": 0.706
+    },
+    "Insights": {
+      "a": {
+        "src": "banner-insights.webm",
+        "ready": 4,
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "time": 1.327,
+        "readyClass": true,
+        "banners": 1
+      },
+      "b": {
+        "src": "banner-insights.webm",
+        "ready": 4,
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "time": 2.032,
+        "readyClass": true,
+        "banners": 1
+      },
+      "advanced": 0.705
+    }
+  },
+  "discoverSources": {
+    "primary": {
+      "src": "banner-discover-primary.webm",
+      "ready": 4,
+      "paused": false,
+      "muted": true,
+      "loop": true,
+      "playsInline": true,
+      "time": 1.392,
+      "readyClass": true,
+      "banners": 1
+    },
+    "secondary": {
+      "a": {
+        "src": "banner-discover-secondary.webm",
+        "ready": 4,
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "time": 2.234,
+        "readyClass": true,
+        "banners": 1
+      },
+      "b": {
+        "src": "banner-discover-secondary.webm",
+        "ready": 4,
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "time": 2.937,
+        "readyClass": true,
+        "banners": 1
+      },
+      "advanced": 0.703
+    }
+  },
+  "expanded": {
+    "open": true,
+    "previewPaused": true,
+    "previewTime": 2.539,
+    "playerSrc": "banner-discover-primary.webm",
+    "playerReady": 4,
+    "playerPaused": false,
+    "playerMuted": false,
+    "url": "http://127.0.0.1:3000/"
+  },
+  "previewStayedPaused": true,
+  "resume": {
+    "a": {
+      "src": "banner-discover-primary.webm",
+      "ready": 4,
+      "paused": false,
+      "muted": true,
+      "loop": true,
+      "playsInline": true,
+      "time": 2.987,
+      "readyClass": true,
+      "banners": 1
+    },
+    "b": {
+      "src": "banner-discover-primary.webm",
+      "ready": 4,
+      "paused": false,
+      "muted": true,
+      "loop": true,
+      "playsInline": true,
+      "time": 3.644,
+      "readyClass": true,
+      "banners": 1
+    },
+    "advanced": 0.657
+  },
+  "restoration": {
+    "before": 0,
+    "after": 0,
+    "exact": true
+  },
+  "vertical": {
+    "title": "First look: a new property in Worli",
+    "expanded": {
+      "title": "First look: a new property in Worli",
+      "ready": 4,
+      "paused": false,
+      "url": "http://127.0.0.1:3000/"
+    },
+    "titleMatches": true,
+    "before": 2607,
+    "after": 2607,
+    "exact": true
+  },
+  "infinite": {
+    "skeleton": true,
+    "loaded": {
+      "count": 6,
+      "unique": 6
+    }
+  },
+  "sticky": {
+    "top": 62,
+    "height": 55,
+    "touch": "pan-x pan-y"
+  },
+  "reducedMotion": {
+    "paused": true,
+    "readyClass": false,
+    "label": "Preview paused"
+  },
+  "urlStable": true
+}
