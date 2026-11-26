@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Realty Vids</title>
+    <script>
+      (function () {
+        var basePath = "/Realty-Vids";
+        var current = window.location;
+        if (current.pathname !== basePath && !current.pathname.startsWith(basePath + "/")) {
+          window.location.replace(basePath + "/");
+          return;
+        }
+        var route = current.pathname.slice(basePath.length) + current.search + current.hash;
+        sessionStorage.setItem("realty-vids-redirect", route || "/light/discover");
+        window.location.replace(basePath + "/");
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
